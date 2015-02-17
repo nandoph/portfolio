@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="jquery/jquery-ui.css">
+  
+<title>Fernando Resume</title>
+
+
+<style type="text/css">
+.wrap{
+	width:820px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.main{
+	width:550px;
+	float:left;
+	padding:5px;
+	margin-left:
+}
+body{font-family: 'Raleway', sans-serif;
+}
+.bar{
+	height:80px;
+	background-color:black;
+}	
+.name{
+	color:white;
+	margin-left:10%;
+	font-size:60px;
+	line-height:75%;
+}
+.right{
+	width:220px;
+	background-color:blue;
+	float:right;
+	padding:5px;
+	
+}
+@media (max-width: 800px) {
+  .wrap{
+	width:95%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.main{
+	width:inherit;
+}
+.right{
+	width:inherit;
+	background-color:blue;
+	float:left;
+}
+
+
+</style>
+</head>
+
+<body>
+
+
+<div class="wrap">
+<div class="bar">
+<p class="name">fernando<br /> 
+marinho</p>
+</div>
+<div class="main">
+
+<h1>Profile</h1>
+<p>Graphic Designer, Designer for the Web, Video Editor, Photographer. </p>
+<p>Efficiency, consistency and communication. As a media designer, these three elements are basic to develop and deliver information. </p>
+<h1>Education</h1>
+<p>A. S. Graphic Design, 2014 - Norwalk C. College; Norwalk, CT</p>
+<p>B. A. Digital Media and Design, Present - University of Connecticut; Stamford, CT</p>
+
+<h1>Skills</h1>
+<p>Adobe Suite - Photoshop, InDesign, Illustrator, Dreamweaver, After Effects, Premiere.
+	Mac and Windows experience.</p>
+	<p>Photography & video - Part time photographer, basic studio.</p>
+	<p>Web - HMTL, CSS, learning Javascript.</p>
+	
+
+  
+  <h1>Languages</h1>
+<p>Portuguese, Spanish - Fluent</p>
+<p>French - Basic<p/>
+
+<h1>Experience</h1>
+<p>Video Editing, Bleachers Company; Stamford, CT – 2014 - Present</p>
+<p>This online streaming company is focused on transmitting high school games, plays and conferences through the internet. My position covers camera operation, video editing, social media, and data filling.</p>
+<p>Graphic & Identity Designer, Copacabana Steakhouse; Port Chester, NY - 2009 - 2014</p>
+<p>Development of brand identity, logo, brochures, menus, flyers, photography and advertisement. Management of social media.</p>
+
+<h1>References</h1>
+
+</div>
+<div class="right">
+<h1>The information about</h1>
+<div id="progressbar"></div>
+</div>
+</div>
+<script src="jquery/external/jquery/jquery.js"></script>
+<script src="jquery/jquery-ui.js"></script>
+<script>
+
+$( "#accordion" ).accordion();
+
+
+
+var availableTags = [
+	"ActionScript",
+	"AppleScript",
+	"Asp",
+	"BASIC",
+	"C",
+	"C++",
+	"Clojure",
+	"COBOL",
+	"ColdFusion",
+	"Erlang",
+	"Fortran",
+	"Groovy",
+	"Haskell",
+	"Java",
+	"JavaScript",
+	"Lisp",
+	"Perl",
+	"PHP",
+	"Python",
+	"Ruby",
+	"Scala",
+	"Scheme"
+];
+$( "#autocomplete" ).autocomplete({
+	source: availableTags
+});
+
+
+
+$( "#button" ).button();
+$( "#radioset" ).buttonset();
+
+
+
+$( "#tabs" ).tabs();
+
+
+
+$( "#dialog" ).dialog({
+	autoOpen: false,
+	width: 400,
+	buttons: [
+		{
+			text: "Ok",
+			click: function() {
+				$( this ).dialog( "close" );
+			}
+		},
+		{
+			text: "Cancel",
+			click: function() {
+				$( this ).dialog( "close" );
+			}
+		}
+	]
+});
+
+// Link to open the dialog
+$( "#dialog-link" ).click(function( event ) {
+	$( "#dialog" ).dialog( "open" );
+	event.preventDefault();
+});
+
+
+
+$( "#datepicker" ).datepicker({
+	inline: true
+});
+
+
+
+$( "#slider" ).slider({
+	range: true,
+	values: [ 17, 67 ]
+});
+
+
+
+$( "#progressbar" ).progressbar({
+	value: 60
+});
+
+
+
+$( "#spinner" ).spinner();
+
+
+
+$( "#menu" ).menu();
+
+
+
+$( "#tooltip" ).tooltip();
+
+
+
+$( "#selectmenu" ).selectmenu();
+
+
+// Hover states on the static widgets
+$( "#dialog-link, #icons li" ).hover(
+	function() {
+		$( this ).addClass( "ui-state-hover" );
+	},
+	function() {
+		$( this ).removeClass( "ui-state-hover" );
+	}
+);
+</script>
+
+
+</body>
+</html>
